@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div>
+            <input type="text" id="calc-text" readonly >
+        </div>  
+        <div class="calc-key">
+            <button type="button" 
+                    onclick=" currentDisplay = ' ' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >AC</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay.slice(0, -1);
+                    document.querySelector('#calc-text').value = currentDisplay;  "             >DEL</button>
+            <button type="button"
+                    onclick=" currentDisplay = currentDisplay + '%' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >%</button>
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '/' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >/</button>    
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '7' ;
+                    document.querySelector('#calc-text').value = currentDisplay;          " >7</button> 
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '8' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >8</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '9' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >9</button>          
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '*' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >*</button>
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '4' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >4</button> 
+            <button type="button"
+                    onclick=" currentDisplay = currentDisplay + '5' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >5</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '6' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >6</button>          
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '-' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >-</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '1' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "          >1</button> 
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '2' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >2</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '3' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >3</button>  
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + `+` ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >+</button>        
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '00' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >00</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '0' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "          >0</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '.' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >.</button> 
+                       
+            <button type="button" 
+                    onclick=" document.querySelector('#calc-text').value = eval(currentDisplay);"        >=</button>
+                    
+        </div>
+    </div>
+<script>
+   
+        let currentDisplay=' ';
+
+        
+      
+</script>
+
+
+
+</body>
+</html>

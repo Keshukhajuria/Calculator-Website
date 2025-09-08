@@ -1,1 +1,87 @@
-[?2004h[?1049h[22;0;0t[1;37r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J(B[0;1m[37m[44m  GNU nano 8.5[50X[1;65HNew Buffer[K[133G[39;49m(B[m[35;43H(B[0;1m[37m[42m[ Welcome to nano.  For basic help, type Ctrl+G. ][39;49m(B[m[36d[36m^G[39m(B[m [32mHelp[36;17H[36m^O[39m(B[m [32mWrite Out[39m(B[m    [36m^F[39m(B[m [32mWhere Is[39m(B[m     [36m^K[39m(B[m [32mCut[36;65H[36m^T[39m(B[m [32mExecute[81G[36m^C[39m(B[m [32mLocation[39m(B[m     [36mM-U[39m(B[m [32mUndo[36;113H[36mM-A[39m(B[m [32mSet Mark[37d[36m^X[39m(B[m [32mExit[37;17H[36m^R[39m(B[m [32mRead File[39m(B[m    [36m^\[39m(B[m [32mReplace[49G[36m^U[39m(B[m [32mPaste[37;65H[36m^J[39m(B[m [32mJustify[81G[36m^/[39m(B[m [32mGo To Line[39m(B[m   [36mM-E[39m(B[m [32mRedo[37;113H[36mM-6[39m(B[m [32mCopy[39m(B[m[2d[?12l[?25h[?25l[35;40H(B[0;1m[37m[42m[ line  1/1 (100%), col  1/ 1 (100%), char  0/0 ( 0%) ][39;49m(B[m[?12l[?25h[2d[?25l[35;95H[?12l[?25h[2d[?25l[35d[J[37d[?12l[?25h[37;1H[?1049l[23;0;0t[?1l>[?2004l
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div>
+            <input type="text" id="calc-text" readonly >
+        </div>  
+        <div class="calc-key">
+            <button type="button" 
+                    onclick=" currentDisplay = ' ' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >AC</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay.slice(0, -1);
+                    document.querySelector('#calc-text').value = currentDisplay;  "             >DEL</button>
+            <button type="button"
+                    onclick=" currentDisplay = currentDisplay + '%' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >%</button>
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '/' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >/</button>    
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '7' ;
+                    document.querySelector('#calc-text').value = currentDisplay;          " >7</button> 
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '8' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >8</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '9' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >9</button>          
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '*' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >*</button>
+            <button type="button"  
+                    onclick=" currentDisplay = currentDisplay + '4' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >4</button> 
+            <button type="button"
+                    onclick=" currentDisplay = currentDisplay + '5' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >5</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '6' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >6</button>          
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '-' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "       >-</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '1' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "          >1</button> 
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '2' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >2</button>         
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '3' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >3</button>  
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + `+` ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >+</button>        
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '00' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >00</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '0' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "          >0</button>
+            <button type="button" 
+                    onclick=" currentDisplay = currentDisplay + '.' ;
+                    document.querySelector('#calc-text').value = currentDisplay;    "           >.</button> 
+                       
+            <button type="button" 
+                    onclick=" document.querySelector('#calc-text').value = eval(currentDisplay);"        >=</button>
+                    
+        </div>
+    </div>
+<script>
+   
+        let currentDisplay=' ';
+
+        
+      
+</script>
+
+
+
+</body>
+</html>

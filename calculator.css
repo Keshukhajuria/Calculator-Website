@@ -8,10 +8,10 @@
     border-radius: 20px;
 }
 #calc-text{
-    hheight: 25%;
-    hwidth: 85%;
-    hpadding: 5%;
-    hmargin-top: 2%;
+    height: 25%;
+    width: 85%;
+    padding: 5%;
+    margin-top: 2%;
     /* border-radius: 20px ; */
     background-color: rgb(97, 91, 91);
     color: rgb(255, 255, 255);

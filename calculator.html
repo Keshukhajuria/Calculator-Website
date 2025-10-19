@@ -1,94 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-#
-
-
-
-
-
-    
 <head>
-    <title>Calculator</title>
-    <link rel="stylesheet" href="calculator.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
-    <div class="calculator">
-        <div>
-            <input type="text" id="calc-text" readonly >
-        </div>  
-        <div class="calc-key">
-            <button type="button" 
-                    onclick=" currentDisplay = ' ' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >AC</button>
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay.slice(0, -1);
-                    document.querySelector('#calc-text').value = currentDisplay;  "             >DEL</button>
-            <button type="button"
-                    onclick=" currentDisplay = currentDisplay + '%' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >%</button>
-            <button type="button"  
-                    onclick=" currentDisplay = currentDisplay + '/' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >/</button>    
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '7' ;
-                    document.querySelector('#calc-text').value = currentDisplay;          " >7</button> 
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '8' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >8</button>         
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '9' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >9</button>          
-            <button type="button"  
-                    onclick=" currentDisplay = currentDisplay + '*' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >*</button>
-            <button type="button"  
-                    onclick=" currentDisplay = currentDisplay + '4' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >4</button> 
-            <button type="button"
-                    onclick=" currentDisplay = currentDisplay + '5' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >5</button>         
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '6' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >6</button>          
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '-' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "       >-</button>
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '1' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "          >1</button> 
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '2' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >2</button>         
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '3' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >3</button>  
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + `+` ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >+</button>        
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '00' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >00</button>
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '0' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "          >0</button>
-            <button type="button" 
-                    onclick=" currentDisplay = currentDisplay + '.' ;
-                    document.querySelector('#calc-text').value = currentDisplay;    "           >.</button> 
-                       
-            <button type="button" 
-                    onclick=" document.querySelector('#calc-text').value = eval(currentDisplay);"        >=</button>
-                    
-        </div>
+  <div class="calculator">
+    <div>
+      <input type="text" id="calc-text" readonly>
     </div>
-<script>
-   
-        let currentDisplay=' ';
+    <div class="calc-key">
+      <button onclick="clearDisplay()">AC</button>
+      <button onclick="deleteLast()">DEL</button>
+      <button onclick="appendValue('%')">%</button>
+      <button onclick="appendValue('/')">/</button>
 
-        
-      
-</script>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('*')">*</button>
 
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('-')">-</button>
 
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('+')">+</button>
 
+      <button onclick="appendValue('00')">00</button>
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
